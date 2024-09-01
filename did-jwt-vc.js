@@ -5,7 +5,7 @@ import fetch from 'node-fetch';
 
 const customResolver = {
   web: async (did) => {
-    const url = `https://soonding.github.io/chatbot_did.json`;
+    const url = `https://wooyoungson.github.io/chatbot_did.json`;
     const response = await fetch(url);
     if (response.ok) {
       const didDocument = await response.json();
@@ -21,12 +21,12 @@ const customResolver = {
 };
 
 async function run() {
-  const key = '24852134397fb76bab0bf063de375d8b8048e33b1c9d3a2777957b1437bc18eb';
+  const key = '604df5c4af0bb47e7f1d77c53d312cfce2609edc1de3726c2faff89032a0e303';
   const signer = ES256KSigner(hexToBytes(key));
 
-  const chatbotDid = 'did:web:soonding.github.io:chatbot_did';
+  const chatbotDid = 'did:web:WooyoungSon.github.io:chatbot';
 
-  const clientDid = 'did:web:soonding.github.io:client_did';
+  const clientDid = 'did:web:WooyoungSon.github.io:client';
 
   const issuer = {
     did: chatbotDid,
